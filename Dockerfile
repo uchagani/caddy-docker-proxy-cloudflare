@@ -1,6 +1,7 @@
 ARG CADDY_VERSION=2.9.1
-LABEL org.opencontainers.image.source https://github.com/uchagani/caddy-docker-proxy-cloudflare
 FROM caddy:${CADDY_VERSION}-builder AS builder
+
+LABEL org.opencontainers.image.source https://github.com/uchagani/caddy-docker-proxy-cloudflare
 
 RUN xcaddy build \
     --with github.com/lucaslorentz/caddy-docker-proxy/v2 \
